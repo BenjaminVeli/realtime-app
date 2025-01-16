@@ -1,0 +1,31 @@
+# <---------- IDE/Editor specific files ---------->
+.vscode/
+.idea/
+
+# <---------- Backend dependencies ---------->
+
+/backend/node_modules/
+/backend/dist/
+/backend/dist-ssr/
+/backend/.vscode/
+/backend/.env
+
+/backend/npm-debug.log*
+/backend/yarn-debug.log*
+/backend/yarn-error.log*
+/backend/pnpm-debug.log*
+/backend/lerna-debug.log*
+
+# <---------- Frontend dependencies ---------->
+/frontend/node_modules/
+/frontend/dist/
+/frontend/dist-ssr/
+/frontend/.vscode/
+
+# Logs
+/frontend/npm-debug.log*
+/frontend/yarn-debug.log*
+/frontend/yarn-error.log*
+/frontend/pnpm-debug.log*
+/frontend/lerna-debug.log*
+
