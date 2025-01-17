@@ -9,35 +9,35 @@ export const signup = async (req, res) => {
         if (!fullName || !email || !password) {
             return res.status(400).json({ message: "All fields are required" });
         }
+
         if (password.length < 6) {
             return res.status(400).json({ message: "Password must be at least 6 characters" });
         }
 
-        const user = await User.findOne({ email })
+        const user = await User.findOne({ email });
 
-        if (user) return res.status(400).json({ messages: "Email already exists" });
+        if (user) return res.status(400).json({ message: "Email already exists" });
 
-        const salt = await bcrypt.genSalt(10)
-        const hasedPassword = await bcrypt.hash(password, salt)
+        const salt = await bcrypt.genSalt(10);
+        const hashedPassword = await bcrypt.hash(password, salt);
 
         const newUser = new User({
             fullName,
             email,
-            password: hasedPassword
-        })
+            password: hashedPassword,
+        });
 
         if (newUser) {
-            //generate jwt token here
-            generateToken(newUser._id, res)
+            // generate jwt token here
+            generateToken(newUser._id, res);
             await newUser.save();
 
             res.status(201).json({
                 _id: newUser._id,
                 fullName: newUser.fullName,
-                emaiL: newUser.email,
+                email: newUser.email,
                 profilePic: newUser.profilePic,
             });
-
         } else {
             res.status(400).json({ message: "Invalid user data" });
         }
