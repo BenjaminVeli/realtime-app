@@ -1,6 +1,6 @@
 ### Realtime Chat App
 
-by: burakorkmez
+<a href="https://www.youtube.com/watch?v=ntKkVrQqBYY&t=13834s" target="_blank">Creator burakorkmez</a>
 
 ## MERN Stack Project:
 
