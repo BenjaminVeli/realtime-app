@@ -26,6 +26,9 @@
 **If using Docker**, refer to this video at minute 14:10:  
 [How to set up MongoDB with Docker](https://www.youtube.com/watch?v=4Dko5W96WHg&t=2003s)
 
+**Create account Cloudinary**, refer to this video at minute 1:02:24:  
+[How to create an account on Cloudinary](https://www.youtube.com/watch?v=ntKkVrQqBYY&list=LL&index=3&t=63s))
+
 ### Steps to set up MongoDB with Docker:
 
 1. Pull the MongoDB Docker image:
